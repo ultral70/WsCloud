@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="casa" class="entidad.Casa">
+	
+		<property name="persona" ref="Dueño"></property> <!-- ref referencia a un objeto creado en   -->
+		<property name="persona" ref="Inquilino1"></property>
+		<property name="persona" ref="Inquilino2"></property>
+		<property name="direccion" ref="Direccion1"></property>
+		<property name="habitacion" ref="Habitacion1"></property>
+		<property name="precio" value="120000.0"></property>
+		<property name="listaInquilinos" ref="listaInquilinos"></property>
+		<property name="listaHabitaciones" ref="listaHabitaciones"></property>
+	
+	</bean>
+	
+	<bean id="Dueño" class="entidad.Persona">
+	
+		<property name="nombre" value="Juan Carlos"></property>
+		<property name="dni" value="12000.0"></property>
+		<property name="edad" value="40"></property>
+	
+	</bean>
+	
+	<bean id="Inquilino1" class="entidad.Persona">
+	
+		<property name="nombre" value="Juan Carlos"></property>
+		<property name="dni" value="8724628U"></property>
+		<property name="edad" value="40"></property>
+	
+	</bean>
+	
+	<bean id="Inquilino2" class="entidad.Persona">
+	
+		<property name="nombre" value="Juan Manuel"></property>
+		<property name="dni" value="025658493f"></property>
+		<property name="edad" value="40"></property>
+	
+	</bean>
+	
+	<bean id="Direccion1" class="entidad.Direccion">
+	
+		<property name="nombreVia" value="Pelayo"></property>
+		<property name="tipoVia" value="CALLE"></property>
+		<property name="cp" value="28094"></property>
+	
+	</bean>
+	
+	<bean id="Habitacion1" class="entidad.Habitacion">
+	
+		<property name="m2" value="54.0"></property>
+		<property name="tipoHabitacion" value="SALÓN"></property>
+	
+	</bean>
+	
+	<bean id="Habitacion1" class="entidad.Habitacion">
+	
+		<property name="m2" value="70.0"></property>
+		<property name="tipoHabitacion" value="BAÑO"></property>
+	
+	</bean>
+	
+	<bean id="listaInquilinos" class="java.util.ArrayList">
+	
+		<constructor-arg>
+	
+			<list>
+				<ref bean="Inquilino1"/>
+				<ref bean="Inquilino2"/>
+			</list>
+	
+		</constructor-arg>
+	
+	</bean>
+	
+	<bean id="listaHabitaciones" class="java.util.ArrayList">
+	
+		<constructor-arg>
+	
+			<list>
+				<ref bean="Habitacion1"/>
+				<ref bean="Habitacion1"/>
+			</list>
+	
+		</constructor-arg>
+	
+	</bean>
+	
+</beans>
