@@ -13,7 +13,7 @@ public class EjercicioClientePedidoApplication {
 	public static ApplicationContext context;
 	
 	public static void main(String[] args) {
-		SpringApplication.run(EjercicioClientePedidoApplication.class, args);
+		context = SpringApplication.run(EjercicioClientePedidoApplication.class, args);
 		
 		Cliente c1 = context.getBean("cliente", Cliente.class);
 		Pedido p1 = context.getBean("pedido", Pedido.class);
@@ -24,6 +24,8 @@ public class EjercicioClientePedidoApplication {
 		c1.setNombre("Pipi");
 		c1.setApellidos("Estrada");
 		c1.setPedido(p1);
+		
+		System.out.println(c1);
 		
 		System.out.println(p1);
 		
