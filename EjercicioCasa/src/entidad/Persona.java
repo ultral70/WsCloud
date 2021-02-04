@@ -24,6 +24,10 @@ public class Persona {
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
+	@Override
+	public String toString() {
+		return "Persona [nombre=" + nombre + ", edad=" + edad + ", dni=" + dni + "]";
+	}
 	
 	
 	

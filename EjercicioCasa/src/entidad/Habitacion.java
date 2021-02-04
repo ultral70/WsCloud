@@ -17,6 +17,10 @@ public class Habitacion {
 	public void setTipoHabitacion(TipoHabitacion tipoHabitacion) {
 		this.tipoHabitacion = tipoHabitacion;
 	}
+	@Override
+	public String toString() {
+		return "Habitacion [m2=" + m2 + ", tipoHabitacion=" + tipoHabitacion + "]";
+	}
 	
 	
 	

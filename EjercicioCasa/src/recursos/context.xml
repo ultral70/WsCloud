@@ -8,8 +8,6 @@
 	<bean id="casa" class="entidad.Casa">
 	
 		<property name="persona" ref="Dueño"></property> <!-- ref referencia a un objeto creado en   -->
-		<property name="persona" ref="Inquilino1"></property>
-		<property name="persona" ref="Inquilino2"></property>
 		<property name="direccion" ref="Direccion1"></property>
 		<property name="habitacion" ref="Habitacion1"></property>
 		<property name="precio" value="120000.0"></property>
@@ -20,32 +18,32 @@
 	
 	<bean id="Dueño" class="entidad.Persona">
 	
-		<property name="nombre" value="Juan Carlos"></property>
-		<property name="dni" value="12000.0"></property>
-		<property name="edad" value="40"></property>
+		<property name="nombre" value="Juan Carlos"/>
+		<property name="edad" value="40"/>
+		<property name="dni" value="12000.0"/>
 	
 	</bean>
 	
 	<bean id="Inquilino1" class="entidad.Persona">
 	
-		<property name="nombre" value="Juan Carlos"></property>
-		<property name="dni" value="8724628U"></property>
-		<property name="edad" value="40"></property>
+		<property name="nombre" value="Juan Carlos"/>
+		<property name="edad" value="40"/>
+		<property name="dni" value="8724628U"/>
 	
 	</bean>
 	
 	<bean id="Inquilino2" class="entidad.Persona">
 	
-		<property name="nombre" value="Juan Manuel"></property>
-		<property name="dni" value="025658493f"></property>
-		<property name="edad" value="40"></property>
+		<property name="nombre" value="Juan Manuel"/>
+		<property name="edad" value="40"/>
+		<property name="dni" value="025658493f"/>
 	
 	</bean>
 	
 	<bean id="Direccion1" class="entidad.Direccion">
 	
 		<property name="nombreVia" value="Pelayo"></property>
-		<property name="tipoVia" value="CALLE"></property>
+		<property name="tV" value="Calle"></property>
 		<property name="cp" value="28094"></property>
 	
 	</bean>
@@ -53,14 +51,14 @@
 	<bean id="Habitacion1" class="entidad.Habitacion">
 	
 		<property name="m2" value="54.0"></property>
-		<property name="tipoHabitacion" value="SALÓN"></property>
+		<property name="tipoHabitacion" value="Salón"></property>
 	
 	</bean>
 	
-	<bean id="Habitacion1" class="entidad.Habitacion">
+	<bean id="Habitacion2" class="entidad.Habitacion">
 	
 		<property name="m2" value="70.0"></property>
-		<property name="tipoHabitacion" value="BAÑO"></property>
+		<property name="tipoHabitacion" value="Baño"></property>
 	
 	</bean>
 	
