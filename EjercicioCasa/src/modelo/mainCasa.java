@@ -16,6 +16,10 @@ public class mainCasa {
 	            
 	            System.out.println(casa);
 	            
+	            casa.calcM2();
+	            
+	            System.out.println("La casa tiene " + casa.calcM2True() + " metros cuadrados");
+	            
 	    }
 		
 	
