@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- Se debe poner el enlace a thymeleaf a mano arriba -->
+<head>
+<meta charset="ISO-8859-1">
+<title>Inicio</title>
+</head>
+<body>
+
+	<h1 style="color: blue">BIENVENIDOS A NUESTRA WEB</h1>
+	
+	<!-- Cargamos los datos mandados a model con ${nombre_atributo} -->
+	<p th:text="'Hola ' + ${nombreUsuario}"></p>
+	
+	<p> Hola <span th:text="${nombreUsuario}"></span></p>
+	
+	<form action="filtrarJuego" method="post">
+	
+		ID: <input type="number" min="1" max="7" value="1" name="id">
+		
+		<input type="submit" value="Enviar"/>
+	
+	</form>
+	
+	<!-- 
+	Para una lista de objetos.
+	lista -> nombre del atributo del objeto Model que hemos puesto en el controlador
+	valor -> cada uno de los valores que tiene la lista,equivalete a un for each de java
+	Ej:
+	for(String valor : lista){
+		System.out.println(valor);
+	}
+	-->
+	
+	<h3 style="color:red" th:each="juego : ${lista}">
+	
+		<span th:text="${juego.id}"></span>
+    	<span th:text="${juego.nombre}"></span>
+    	<span th:text="${juego.compania}"></span>
+    	<span th:text="${juego.precio}"></span>
+    	<span th:text="${juego.puntos}"></span>
+    	
+	</h3>
+	
+</body>
+</html>
