@@ -58,11 +58,11 @@ public class EjercicioVideojuegoApplication {
 		System.out.println(datosJuego);
 		
 		//Usamos el método isPresent para comprobar si e objeto existe en la BBDD
-		Optional<Videojuego> cocheOptional = daoJuego.findById(8);
-		if(cocheOptional.isPresent()) {
+		Optional<Videojuego> juegoOptional = daoJuego.findById(8);
+		if(juegoOptional.isPresent()) {
 			System.out.println("El Videojuego existe en la BBDD");
 			//Si existe el objeto lo desenvolvemos
-			System.out.println(cocheOptional.get());
+			System.out.println(juegoOptional.get());
 		}else {
 			//Si no se muestra un syso indicando que no existe
 			System.out.println("El Videojuego no existe en la BBDD");

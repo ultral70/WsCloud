@@ -11,7 +11,7 @@ import uem.dam.videojuego.modelo.entidad.Usuario;
 import uem.dam.videojuego.modelo.entidad.Videojuego;
 import uem.dam.videojuego.modelo.persistencia.DaoUsuario;
 import uem.dam.videojuego.modelo.persistencia.DaoVideojuego;
-
+//Crear los spring starter como war, ya que jar es una app standalone, y puede dar problemas
 @SpringBootApplication
 public class EjercicioVideojuegoMvcApplication {
 
